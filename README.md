@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample application using the Dagwood gem to set up a DAG (Directed Acyclic Graph) running that will allow us to schedule/order/block sidekiq jobs so we aren't dependent on a series of cron-jobs with 'guessed' timing, and can simply set of a master job that handles the dependencies/order etc.
 
-Things you may want to cover:
+The "magic" in this is in the app/sidekiq/order_all_food_job.rb
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Otherwise, it's a normal rails all, with the entry point being `localhost:3000/orders`
