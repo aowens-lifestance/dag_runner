@@ -1,0 +1,2 @@
+class CatFood < ApplicationRecord
+end

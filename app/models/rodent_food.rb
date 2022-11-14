@@ -1,0 +1,2 @@
+class RodentFood < ApplicationRecord
+end

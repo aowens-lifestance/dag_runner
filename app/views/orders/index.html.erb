@@ -1,0 +1,75 @@
+<div>
+  <h1>Welcome to the Ordering Page!</h1>
+    <p id="alert"><%= flash[:alert] %></p>
+
+  <hr />
+  <pre>
+    <%= link_to "Order Dog Food", order_dog_food_path %>
+  </pre>
+  <pre>
+    <%= link_to "Order Cat Food", order_cat_food_path %>
+  </pre>
+  <pre>
+    <%= link_to "Order Rodent Food", order_rodent_food_path %>
+  </pre>
+  <pre>
+    <%= link_to "Order All Food", order_all_food_path %>
+  </pre>
+  <pre>
+    <%= link_to "Clear All Orders", clear_orders_path %>
+  </pre>
+  
+  <hr />
+
+    Dog Food Orders:
+    <% if @dog_food_orders.empty? %>
+      No dog food orders!
+    <% else %>
+      <table class="table">
+          <% @dog_food_orders.each do |dog_food_order, index| %>                    
+              <tr>
+              <td><%= dog_food_order.text %></td>
+              </tr>
+          <% end %>
+      </table>
+    <% end %>
+    <hr />
+    Cat Food Orders:
+    <% if @cat_food_orders.empty? %>
+      No cat food orders!
+    <% else %>
+      <table class="table">
+          <% @cat_food_orders.each do |cat_food_order, index| %>                    
+              <tr>
+              <td><%= cat_food_order.text %></td>
+              </tr>
+          <% end %>
+      </table>
+    <% end %>
+    <hr />
+    Rodent Food Orders:
+    <% if @dog_food_orders.empty? %>
+      No rodent food orders!
+    <% else %>
+      <table class="table">
+          <% @rodent_food_orders.each do |rodent_food_order, index| %>                    
+              <tr>
+              <td><%= rodent_food_order.text %></td>
+              </tr>
+          <% end %>
+      </table>
+    <% end %>
+    <hr />
+    <br />
+    <br />
+    <hr />
+
+    Messages sent:
+    <table class="table">
+        <% @order_messages.each do |order_message, index| %>                    
+            <tr>
+            <td><%= order_message.text %></td>
+            </tr>
+        <% end %>
+    </table>
+</div>

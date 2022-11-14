@@ -1,0 +1,2 @@
+class OrderMessage < ApplicationRecord
+end

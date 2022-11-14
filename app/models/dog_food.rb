@@ -1,0 +1,2 @@
+class DogFood < ApplicationRecord
+end
