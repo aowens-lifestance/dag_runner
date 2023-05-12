@@ -22,7 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'sidekiq'
+gem 'sidekiq', '6.5.8'
+gem 'sidekiq-batch'
 gem 'dagwood'
 
 # Use Active Storage variant
